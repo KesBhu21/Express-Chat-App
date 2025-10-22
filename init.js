@@ -11,8 +11,7 @@ async function main() {
 }
 
 
-let allChats = [
-  {
+let allChats={
     from: "Alice",
     to: "Bob",
     msg: "Hey Bob! How’s your day going?",
@@ -27,9 +26,21 @@ let allChats = [
 {
     from: "Alice",
     to: "Bob",
-    msg: "Haha same here! Missing our evening walks though 😅"
-
-];
+    msg: "Haha same here! Missing our evening walks though 😅",
+    created_at: new Date()
+},
+{
+    from: "Bob",
+    to: "Alice",
+    msg: "Aww, we’ll go this weekend for sure 🌸",
+    created_at: new Date()
+},
+{
+    from: "Alice",
+    to: "Bob",
+    msg: "Deal 😎 I’ll bring coffee this time!",
+    created_at: new Date()
+}
 
 
 Chat.insertMany(allChats)
