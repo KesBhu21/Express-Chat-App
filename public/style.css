@@ -1,19 +1,94 @@
-body{
-    margin-left: 20px;
-
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f6fb;
+  color: #333;
+  margin: 0;
+  padding: 20px;
 }
 
-.chat{
-    background-color: aliceblue;
-    padding: 20px;
-    border-radius: 16px;
-    display: inline-block;
+h3 {
+  text-align: center;
+  color: #222;
 }
 
-.msg{
-    background-color: dodgerblue;
-    color: white;
-    padding: 5px 15px;
-    border-radius: 16px;
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 6px;
+}
 
+button:hover {
+  background-color: #0056b3;
+}
+
+.chat {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  padding: 16px;
+  width: 360px;
+  margin: 20px auto;
+  transition: transform 0.2s ease;
+}
+
+.chat:hover {
+  transform: scale(1.02);
+}
+
+.msg {
+  background-color: #e7f1ff;
+  border-radius: 12px;
+  padding: 12px;
+  margin: 10px 0;
+  word-wrap: break-word;
+}
+
+.msg p {
+  margin: 0;
+  font-size: 15px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #ccc;
+  margin: 10px 0;
+}
+
+p {
+  margin: 4px 0;
+}
+
+form {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+textarea {
+  border-radius: 8px;
+  padding: 8px;
+  width: 95%;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  resize: none;
+}
+
+.new-chat-btn {
+  display: block;
+  margin: 10px auto;
+  background-color: #28a745;
+}
+
+.new-chat-btn:hover {
+  background-color: #1f8a37;
+}
+
+.time-info {
+  font-size: 13px;
+  color: #666;
 }
