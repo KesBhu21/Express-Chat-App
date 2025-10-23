@@ -1,18 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Edit Your Chat</title>
-  </head>
-  <body>
-    <h3>Edit Your Chat <%= chat.id %></h3>
-    <p>This chat was sent from <%= chat.from %> to <%= chat.to %></p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edit Your Chat</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f5f3ff, #dbeafe);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      background: #ffffff;
+      padding: 2rem 3rem;
+      border-radius: 1rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 420px;
+    }
+
+    h3 {
+      text-align: center;
+      color: #7c3aed;
+      font-size: 1.6rem;
+      margin-bottom: 0.8rem;
+    }
+
+    p {
+      text-align: center;
+      color: #374151;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    textarea {
+      width: 100%;
+      border: 2px solid #e5e7eb;
+      border-radius: 0.5rem;
+      padding: 0.9rem;
+      font-size: 1rem;
+      resize: vertical;
+      min-height: 120px;
+      transition: all 0.3s ease;
+    }
+
+    textarea:focus {
+      border-color: #7c3aed;
+      outline: none;
+      box-shadow: 0 0 5px rgba(124, 58, 237, 0.3);
+    }
+
+    button {
+      width: 100%;
+      background-color: #7c3aed;
+      color: white;
+      padding: 0.9rem;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-top: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #6d28d9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>Edit Chat</h3>
+    <p>This chat was sent from <strong><%= chat.from %></strong> to <strong><%= chat.to %></strong></p>
 
     <form method="POST" action="/chats/<%= chat._id %>?_method=PUT">
-      <textarea name="msg" rows="5" cols="50"><%= chat.msg %></textarea>
-      <br />
-      <button>Edit</button>
+      <textarea name="msg" required><%= chat.msg %></textarea>
+      <button type="submit">Save Changes</button>
     </form>
-  </body>
+  </div>
+</body>
 </html>
